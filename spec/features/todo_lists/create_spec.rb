@@ -1,10 +1,10 @@
-require ‘spec_helper’
+require 'spec_helper'
 
-describe “Creating todo lists” do 
-	it “redirects to the todo list index page on success” do
-		visit “/todo_lists”
-		click_link “New Todo List”
-		expect(page).to have_content("New todo_list")
+describe 'Creating todo lists' do 
+	it 'redirects to the todo list index page on success' do
+		visit todo_lists_path
+		click_link 'New Todo list'
+		expect(page).to have_content('New todo_list')
 
 	end
 end
