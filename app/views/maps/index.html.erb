@@ -1,0 +1,18 @@
+<script>
+  // Instantiate google maps
+
+  // create coords arrays
+<% @zones.each do |zone| %>
+  zone_coords = []
+  <% zone.zone_coord.each do |coord| %>
+    zone_coords.push([<%= coord.lat %>, <%= coord.lng %>])
+  <% end %>
+
+  // draw coords on map
+<% end %>
+
+</script>
+
+<div id="themap">
+
+</div>

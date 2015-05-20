@@ -4,6 +4,7 @@ class CreateTodoLists < ActiveRecord::Migration
       t.string :title
       t.string :string
       t.text :description
+      t.integer :cached_count, default: 0
 
       t.timestamps
     end
