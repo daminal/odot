@@ -30,25 +30,25 @@ describe 'Editing todo lists' do
 		expect(todo_list.description).to eq('New description')
 	end	
 
-		it 'displays an error with no title' do
+	it 'displays an error with no title' do
 		update_todo_list todo_list: todo_list, title: ''
 		expect(page).to have_content('error')
-		end
+	end
 
-		it 'displays an error with too short a title' do
-			update_todo_list todo_list: todo_list, title: 'hi'
-			expect(page).to have_content('error')
-		end
+	it 'displays an error with too short a title' do
+		update_todo_list todo_list: todo_list, title: 'hi'
+		expect(page).to have_content('error')
+	end
 
-		it 'displays an error with no description' do
-			update_todo_list todo_list: todo_list, description: ''
-			expect(page).to have_content('error')
-		end
+	it 'displays an error with no description' do
+		update_todo_list todo_list: todo_list, description: ''
+		expect(page).to have_content('error')
+	end
 
-		it 'displays an error with too short a description' do
-			update_todo_list todo_list: todo_list, description: 'hi'
-			expect(page).to have_content('error')
-		end
+	it 'displays an error with too short a description' do
+		update_todo_list todo_list: todo_list, description: 'hi'
+		expect(page).to have_content('error')
+	end
 end
 
 #left out one step that was near the end.
