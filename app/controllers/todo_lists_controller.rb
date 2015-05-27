@@ -69,6 +69,9 @@ class TodoListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def todo_list_params
-      params.require(:todo_list).permit(:title, :string, :description => 'My Description')
+      params.require(:todo_list).permit(:title, :string, :description)
     end
 end
+
+#line 72 used to read :       params.require(:todo_list).permit(:title, :string, :description => 'My Description')
+

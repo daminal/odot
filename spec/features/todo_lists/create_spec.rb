@@ -49,7 +49,7 @@ describe 'Creating todo lists' do
 		create_todo_list title: 'Grocery list', description: ''
 
 		expect(page).to have_content('error')
-		expect(TodoList.count).to eq(0)		
+		expect(TodoList.count).to eq(0)	
 
 		visit todo_lists_path
 		expect(page).to_not have_content('Grocery list')
