@@ -1,6 +1,10 @@
 Odot::Application.routes.draw do
-  resources :todo_lists
+  resources :todo_lists do
+    resources :todo_items
+  end
   root 'todo_lists#index'
+  #I make names come up in routes like todo_list_todo_items by adding the do, the resource, and the end. 
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
