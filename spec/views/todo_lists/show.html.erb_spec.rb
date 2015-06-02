@@ -4,7 +4,6 @@ describe "todo_lists/show" do
   before(:each) do
     @todo_list = assign(:todo_list, stub_model(TodoList,
       :title => "Title",
-      :string => "String",
       :description => "MyText"
     ))
   end
@@ -13,7 +12,6 @@ describe "todo_lists/show" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Title/)
-    rendered.should match(/String/)
     rendered.should match(/MyText/)
   end
 end
